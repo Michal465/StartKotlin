@@ -19,10 +19,17 @@ class MainActivity : AppCompatActivity() {
         // Připojení prvků z XML
         val counterText: TextView = findViewById(R.id.counterText)
         val incrementButton: Button = findViewById(R.id.incrementButton)
+        val decrementButton: Button = findViewById(R.id.decrementButton)
 
         // Nastavení kliknutí na tlačítko
         incrementButton.setOnClickListener {
             counter++ // Zvyšte počítadlo
+            counterText.text = counter.toString() // Aktualizujte zobrazený text
+        }
+
+        // Nastavení kliknutí na tlačítko
+        decrementButton.setOnClickListener {
+            counter-- // Snizte počítadlo
             counterText.text = counter.toString() // Aktualizujte zobrazený text
         }
     }
