@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         val counterText: TextView = findViewById(R.id.counterText)
         val incrementButton: Button = findViewById(R.id.incrementButton)
         val decrementButton: Button = findViewById(R.id.decrementButton)
+        val ZeroButton: Button = findViewById(R.id.ZeroButton)
+        val FiftyButton: Button = findViewById(R.id.FiftyButton)
+        val OneHunderedButton: Button = findViewById(R.id.OneHunderedButton)
 
         // Nastavení kliknutí na tlačítko
         incrementButton.setOnClickListener {
@@ -30,6 +33,24 @@ class MainActivity : AppCompatActivity() {
         // Nastavení kliknutí na tlačítko
         decrementButton.setOnClickListener {
             counter-- // Snizte počítadlo
+            counterText.text = counter.toString() // Aktualizujte zobrazený text
+        }
+
+        // Nastavení kliknutí na tlačítko
+        ZeroButton.setOnClickListener {
+            counter = 0 // Snizte počítadlo
+            counterText.text = counter.toString() // Aktualizujte zobrazený text
+        }
+
+        // Nastavení kliknutí na tlačítko
+        FiftyButton.setOnClickListener {
+            counter = 50 // Snizte počítadlo
+            counterText.text = counter.toString() // Aktualizujte zobrazený text
+        }
+
+        // Nastavení kliknutí na tlačítko
+        OneHunderedButton.setOnClickListener {
+            counter = 100 // Snizte počítadlo
             counterText.text = counter.toString() // Aktualizujte zobrazený text
         }
     }
